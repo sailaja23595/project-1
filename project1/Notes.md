@@ -5,8 +5,9 @@ I have created new application with name project1-088.
 I had added Heroku Postgres Add-on and selected free plan.
 I gave username and password.
 I got Heroku account credentials.
+Time taken for this task is 25 minutes.
 
-Task-2:
+<!-- Task-2:
 python and flask
 Firstly, I have installed flask usin pip command(py -m pip install flask)
 I have downloaded the zip file(project1) then I installed requirements.txt(py -m pip install -r requirements.txt)
@@ -20,7 +21,5 @@ I got the URL and I pasted the URL.I got the output: "Project-1:TODO"!
 Task-3:
 I created a goodreads account and gave information to develop an API key.
 I have created on goodreads.py file in that I gave API key to check the book details through that python file.
-I got the book deatils based on KEY and ISBN number.
-
-
+I got the book deatils based on KEY and ISBN number. -->
 
