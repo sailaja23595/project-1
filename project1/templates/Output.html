@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         {% for key, value in Output.items() %}
+            <tr>
+                {% if key == "Username" %}
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+               {% endif %}
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html> 
