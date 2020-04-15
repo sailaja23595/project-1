@@ -19,8 +19,9 @@ I had run the application by using flask run(py -m flask run).
 I got the URL and I pasted the URL.I got the output: "Project-1:TODO"!
 Time taken for this task is 40 minutes.
 
-<!-- Task-3:
+Task-3:
+Goodreads API
 I created a goodreads account and gave information to develop an API key.
 I have created on goodreads.py file in that I gave API key to check the book details through that python file.
-I got the book deatils based on KEY and ISBN number. -->
-
+I got the book deatils based on KEY and ISBN number.
+Time taken for this task is 35 minutes.
