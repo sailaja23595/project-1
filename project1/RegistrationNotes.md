@@ -20,3 +20,8 @@ I have referred tutorialspoint to know about render template.
 Reference Link: https://www.tutorialspoint.com/flask/flask_sending_form_data_to_template.htm
 Time taken for this task is 40 minutes.
 
+Task-3: Submitting Registration form data to flask using GET and POST methods
+First I leraned about Get and Post methods in tutorials point.I have link those to the project.
+Referene Link:https://www.tutorialspoint.com/php/php_get_post.htm
+I have run the flask by that I got the url and I pasted it in the browser So I got the Registartion form I gave details in that and I have submitted. I got the output by displaying only Username in both browser as well as in Flask console.
+Time taken for this task is 45 minutes.
