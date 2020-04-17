@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Registration Form </title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:lightblue;
+  width:50%;
+  border-style: solid;
+}
+
+.container {
+  padding: 16px;
+  background-color:lightcoral;
+}
+
+input[type=text], input[type=password] {
+  width: 250px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: darkgreen;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+
+</style>
+</head>
+<body>
+
+<form action="http://127.0.0.1:5000/Register" method = "POST">
+  <div class="container">
+    <div class="jumbotron text-center">
+    <h1>Registration Page</h1>
+    <p> Please Fill The Form To Register </p>
+    </div>
+    <label for="name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="Username" required>
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br>
+    <hr>
+    
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+</form>
+
+</body>
+</html>
