@@ -21,3 +21,4 @@ I have handled the server side request using flask with get and post methods.
 I passed the registration data i.e..Output back to the browser.
 I have run the flask and I pasted the url in the google so I got output of displaying the username.
 From FLask I obtained the registration data and displayed the values in Flask console.
+Time taken for this task is 40 minutes.
