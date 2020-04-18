@@ -38,7 +38,7 @@ def Output():
         users = Tables.query.filter_by(Username=request.form["Username"]).first()
         if users is not None:
             message = "User name is already existing.Register with new user name"
-            return render_template("Registration.html",message = message)
+            return render_template("Registration.html",message1 = message)
         db.session.add(userdata)
         db.session.commit()
         message = "Registartion is successful"
@@ -47,4 +47,10 @@ def Output():
     #     print(result['Username'])
     else:
         return render_template("Registration.html")
+@app.route('/admin')
+def admin():
+    allusersdata = Tables.query.all()
+    return render_template("administration.html",admin = allusersdata)
+
+
 
