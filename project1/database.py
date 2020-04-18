@@ -35,12 +35,16 @@ def Output():
     db.create_all()
     if request.method =='POST':
         userdata = Tables(request.form["Username"],request.form["psw"])
+        users = Tables.query.filter_by(Username=request.form["Username"]).first()
+        if users is not None:
+            message = "User name is already existing.Register with new user name"
+            return render_template("Registration.html",message = message)
         db.session.add(userdata)
         db.session.commit()
+        message = "Registartion is successful"
+        return render_template("Registration.html",message = message)
     #     result = request.form
     #     print(result['Username'])
-
-        return render_template("Registration.html")
     else:
         return render_template("Registration.html")
 

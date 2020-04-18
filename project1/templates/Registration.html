@@ -53,6 +53,7 @@ hr {
 <body>
 
 <form action="http://127.0.0.1:5000/Register" method = "POST">
+  
   <div class="container">
     <div class="jumbotron text-center">
     <h1>Registration Page</h1>
@@ -69,6 +70,16 @@ hr {
     <button type="submit" class="registerbtn">Register</button>
   </div>
 </form>
+{% if message %}
+<div class = "container" style="text-align: center;">
+<div class="alert alert-success alert-dismissible">
+  <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+{{message}}
+</div>
+</div>
+{%endif%}
+
+
 
 </body>
 </html>
