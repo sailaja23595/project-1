@@ -27,7 +27,7 @@ session = Session()
 
 @app.route("/")
 def index():
-    return "Project 1: TODO"
+    return redirect("/Register")
 
 
 @app.route("/Register", methods = ['POST', 'GET'])
