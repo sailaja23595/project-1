@@ -46,6 +46,8 @@ def Output():
         db.session.commit()
         message = "Registartion is successful"
         return render_template("Registration.html",message = message)
+    #     result = request.form
+    #     print(result['Username'])
     else:
         return render_template("Registration.html")
 @app.route('/admin')
@@ -58,6 +60,7 @@ def login():
     users = Tables.query.filter_by(Username=request.form["Username"]).first()
     if users is not None:
         if request.form["psw"]==users.psw:
+            session["Username"] = request.form["Username"]
             return redirect("/homepage")
         else:
             message = "Wrong credentials"
@@ -67,8 +70,19 @@ def login():
         return render_template("Registration.html",message = message)
 @app.route("/homepage")
 def homepage():
+    try:
+        users = session["Username"]
         return render_template("login.html")
+    except:
+        message = "login to view the homepage"
+        return render_template("Registration.html",message = message)
 @app.route("/logout")
 def logout():
+    try:
+        users = session["Username"]
+        session.clear()
         message = "Logged out Successful"
+        return render_template("Registration.html",message = message)
+    except:
+        message = "You have to login to logout"
         return render_template("Registration.html",message = message)
