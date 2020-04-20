@@ -55,7 +55,7 @@ hr {
 </head>
 <body>
 
-<form action="http://127.0.0.1:5000/Register" method = "POST">
+<form action="http://127.0.0.1:5000/Register" method = "POST" >
   
   <div class="container">
     <div class="jumbotron text-center">
@@ -68,9 +68,9 @@ hr {
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
     <br>
-    <hr>
-    
+    <hr> 
     <button type="submit" class="registerbtn">Register</button>
+    <button type="submit" class="registerbtn" formaction = "http://127.0.0.1:5000/auth">Login</button>
   </div>
 </form>
 {% if message %}
