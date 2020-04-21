@@ -14,3 +14,8 @@ All the alert messages have worked correctly according to the redirect route. Bu
 I have debugged the issue by craeting the session variables.
 Time taken to complete this task : 45 minutes.
 
+Task-3: Imported books from books.csv to database
+I have created two python files,book.py In this I have written code for reading the csv file and updating them into the table.
+bookdatabase.py In this I have written a constructor for books database.
+After executing this file I have loggined into the adminer I have checked my database for records of books. It took time to display after that I have found 5000 book records in that table.
+Time taken to complete thsi task is 50 minutes.
