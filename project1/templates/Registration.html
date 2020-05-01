@@ -12,7 +12,7 @@
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color:lightblue;
+  /* background-color:lightblue; */
   
 }
 
@@ -52,10 +52,43 @@ hr {
 }
 
 </style>
+<script type = "text/javascript">
+function checkPassword(str)
+  {
+  var validpwd = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+  return validpwd.test(str);
+  }
+  function checkForm(form)
+  {
+    if(form.Username.value == "") {
+      document.getElementById("textdisplay").innerHTML="Error: Username cannot be blank!";
+      return false;
+    }
+    else {
+      if(form.psw.value != "") {
+        if(!checkPassword(form.psw.value)) {
+          document.getElementById("textdisplay").innerHTML="The password should have at least 6 characters, with at least one uppercase letter, one lowercase letter, one number and a symbol.";
+        return false;
+        }
+      }
+      else {
+        document.getElementById("textdisplay").innerHTML="Error: Password cannot be blank!";
+        return false;
+      }
+    } 
+    return true;
+  }
+ </script>
+ <style>
+  body {
+      background-image: url('static/Bgimage.jpg'); background-size: cover; background-repeat: no-repeat;
+      }
+</style>
+
 </head>
 <body>
 
-<form action="http://127.0.0.1:5000/Register" method = "POST" >
+<form action="http://127.0.0.1:5000/Register" method = "POST" onsubmit="return checkForm(this);" >
   
   <div class="container">
     <div class="jumbotron text-center">
@@ -63,15 +96,16 @@ hr {
     <p> Please Fill The Form To Register </p>
     </div>
     <label for="name"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="Username" required>
+    <input type="text" placeholder="Enter Username" name="Username">
     <br>
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="psw">
     <br>
     <hr> 
     <button type="submit" class="registerbtn">Register</button>
     <button type="submit" class="registerbtn" formaction = "http://127.0.0.1:5000/auth">Login</button>
   </div>
+  <p style="text-align: center; color: black;" id = "textdisplay"></p>
 </form>
 {% if message %}
 <div class = "container" style="text-align: center;">
@@ -90,7 +124,7 @@ hr {
 </div>
 {%endif%}
 
-
-
+</div>
+</div>
 </body>
 </html>
